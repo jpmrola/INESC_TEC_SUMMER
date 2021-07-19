@@ -2,10 +2,10 @@ import os
 import json
 import random
 
-labels = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels.csv'
-new_labels20 = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels20.csv'
-new_labels80 = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels80.csv'
-class_name_to_label_path = '/home/jrola/PycharmProjects/pytorch_CTM/class_name_to_label.json'
+labels = '/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_labels.csv'
+new_labels20 = '/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_labels20.csv'
+new_labels80 = '/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_labels80.csv'
+class_name_to_label_path = '/home/jrola/PycharmProjects/data/pytorch_CTM/class_name_to_label.json'
 
 random.seed()
 

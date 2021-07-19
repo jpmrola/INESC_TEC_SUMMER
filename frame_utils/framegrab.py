@@ -17,10 +17,10 @@ def extract_frames(file_path, target_dir):
         count += 1
 
 
-root = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_org'
-frame_root = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_frames'
-labels_path = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels.csv'
-class_name_to_label_path = '/home/jrola/PycharmProjects/pytorch_CTM/class_name_to_label_4.json'
+root = '/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_org'
+frame_root = '/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_frames'
+labels_path = '/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_labels.csv'
+class_name_to_label_path = '/home/jrola/PycharmProjects/pytorch_CTM/data/class_name_to_label_4.json'
 
 # read files
 files = []

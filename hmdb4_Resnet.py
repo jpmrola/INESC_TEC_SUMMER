@@ -21,11 +21,11 @@ import json
 
 plt.ion()  # interactive mode
 
-hmdb_data_dir = "/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_org"
-hmdb_label_dir = "/home/jrola/PycharmProjects/pytorch_CTM/testTrainMulti_7030_splits"
-hmdb_frames_dir = "/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_frames"
-train_labels = "/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels80.csv"
-test_labels = "/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels20.csv"
+hmdb_data_dir = "/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_org"
+hmdb_label_dir = "/home/jrola/PycharmProjects/pytorch_CTM/data/testTrainMulti_7030_splits"
+hmdb_frames_dir = "/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_frames"
+train_labels = "/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_labels80.csv"
+test_labels = "/home/jrola/PycharmProjects/pytorch_CTM/data/hmdb4_labels20.csv"
 
 batch_size = 32
 
@@ -149,7 +149,7 @@ def train_model(model, criterion, optimizer, scheduler, stats, num_epochs=4):
 ## prepare the model
 
 
-class_name_to_label_path = '/home/jrola/PycharmProjects/pytorch_CTM/class_name_to_label_4.json'
+class_name_to_label_path = '/home/jrola/PycharmProjects/pytorch_CTM/data/class_name_to_label_4.json'
 f = open(class_name_to_label_path)
 classes = json.load(f)
 f.close()
