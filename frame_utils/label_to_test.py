@@ -7,6 +7,8 @@ new_labels20 = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels20.csv'
 new_labels80 = '/home/jrola/PycharmProjects/pytorch_CTM/hmdb4_labels80.csv'
 class_name_to_label_path = '/home/jrola/PycharmProjects/pytorch_CTM/class_name_to_label.json'
 
+random.seed()
+
 if os.path.isfile(labels) == False:
     print("No File")
     exit()
