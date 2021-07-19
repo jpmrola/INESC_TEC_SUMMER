@@ -14,7 +14,6 @@ def extract_frames(file_path, target_dir):
         cv2.imwrite(frame_path, image)     # save frame as JPEG file
         success, image = vidcap.read()
         success, image = vidcap.read()
-        success, image = vidcap.read()
         count += 1
 
 

@@ -1,3 +1,4 @@
 hmdb*/
 testTrain*/
 .idea/
+__pycache__/
