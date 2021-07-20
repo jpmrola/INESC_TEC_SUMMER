@@ -31,13 +31,12 @@ class FrameDataset(Dataset):
             start = random.randrange(len(all_frames) - self.slice_size)
             frames = all_frames[start: start + self.slice_size]
         else:
-            frames = all_frames
+            frames = all_frames     # TODO: fazer sort dos frames
 
         images = []
         # load the images
-        for frame in frames:
-            path = os.path.join(self.root_dir, str(self.frames_csv.iloc[idx, 0])) + '/' + frame
-            images.append(Image.open(path).convert('RGB'))
+        for frame in frames:        # TODO: Crop / Random Crop
+            path = os.path.join(self.root_dir, str(self.frames_csv.iloc[idx, 0])) + '/' + frame     # TODO: os.path.join(self.root_dir, str(self.frames_csv.iloc[idx, 0]), frame)            images.append(Image.open(path).convert('RGB'))
         transform = transforms.Compose([
             transforms.Resize((240, 320), ),
             transforms.ToTensor(),

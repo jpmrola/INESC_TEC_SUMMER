@@ -154,7 +154,7 @@ f = open(class_name_to_label_path)
 classes = json.load(f)
 f.close()
 
-model_ft = torchvision.models.video.r3d_18(pretrained=True, progress=True)
+model_ft = torchvision.models.video.r3d_18(pretrained=True, progress=True)      # TODO: fazer freeze do modelo
 
 # Here the size of each output sample is set to 2.
 # Alternatively, it can be generalized to nn.Linear(num_ftrs, len(class_names)).
@@ -165,7 +165,7 @@ model_ft = model_ft.to(device)
 criterion = nn.CrossEntropyLoss()
 
 # Observe that all parameters are being optimized
-optimizer_ft = torch.optim.Adam(model_ft.parameters(), lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0,
+optimizer_ft = torch.optim.Adam(model_ft.parameters(), lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0,     # TODO: lr = 2e-4
                                 amsgrad=False)
 
 # Decay LR by a factor of 0.1 every 7 epochs
